@@ -1720,3 +1720,97 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Accent */
+
+	a:hover {
+		color: rgb(103, 103, 207);
+	}
+
+	h1,
+	h2.major, h3.major, h4.major, h5.major, h6.major {
+		text-shadow: 0 0 18px rgba(103, 103, 207, 0.35);
+	}
+
+	h2.major, h3.major, h4.major, h5.major, h6.major {
+		border-bottom-color: rgb(103, 103, 207);
+	}
+
+	#header .logo {
+		border-color: rgb(103, 103, 207);
+		box-shadow: 0 0 22px rgba(103, 103, 207, 0.4);
+	}
+
+	#header nav ul {
+		border-color: rgba(103, 103, 207, 0.6);
+	}
+
+		#header nav ul li {
+			border-left-color: rgba(103, 103, 207, 0.6);
+		}
+
+		#header nav ul li a:hover {
+			background-color: rgba(103, 103, 207, 0.18);
+		}
+
+	#profile {
+		box-shadow: 0 0 0 3px rgba(103, 103, 207, 0.4);
+	}
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -moz-transform 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -ms-transform 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out, color 0.2s ease-in-out;
+		box-shadow: inset 0 0 0 1px rgba(103, 103, 207, 0.55);
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		button:hover,
+		.button:hover {
+			background-color: rgba(103, 103, 207, 0.16);
+			box-shadow: inset 0 0 0 1px rgb(103, 103, 207);
+			-moz-transform: translateY(-2px);
+			-webkit-transform: translateY(-2px);
+			-ms-transform: translateY(-2px);
+			transform: translateY(-2px);
+		}
+
+		input[type="submit"].primary,
+		input[type="reset"].primary,
+		input[type="button"].primary,
+		button.primary,
+		.button.primary {
+			background-image: linear-gradient(135deg, rgb(120, 120, 224), rgb(90, 90, 176));
+			background-color: rgb(103, 103, 207);
+			color: #ffffff !important;
+			box-shadow: 0 4px 18px rgba(103, 103, 207, 0.45);
+		}
+
+			input[type="submit"].primary:hover,
+			input[type="reset"].primary:hover,
+			input[type="button"].primary:hover,
+			button.primary:hover,
+			.button.primary:hover {
+				background-image: linear-gradient(135deg, rgb(140, 140, 234), rgb(103, 103, 207));
+				box-shadow: 0 6px 24px rgba(103, 103, 207, 0.6);
+				-moz-transform: translateY(-2px);
+				-webkit-transform: translateY(-2px);
+				-ms-transform: translateY(-2px);
+				transform: translateY(-2px);
+			}
+
+	ul.icons li a {
+		box-shadow: inset 0 0 0 1px rgba(103, 103, 207, 0.55);
+	}
+
+		ul.icons li a:hover {
+			background-color: rgba(103, 103, 207, 0.18);
+			box-shadow: inset 0 0 0 1px rgb(103, 103, 207);
+		}
