@@ -1741,6 +1741,10 @@ input, select, textarea {
 		box-shadow: 0 0 22px rgba(103, 103, 207, 0.4);
 	}
 
+	#header > *:before {
+		background: rgb(103, 103, 207);
+	}
+
 	#header nav ul {
 		border-color: rgba(103, 103, 207, 0.6);
 	}
@@ -1752,6 +1756,10 @@ input, select, textarea {
 		#header nav ul li a:hover {
 			background-color: rgba(103, 103, 207, 0.18);
 		}
+
+	#header nav.use-middle:after {
+		background: rgba(103, 103, 207, 0.6);
+	}
 
 	#profile {
 		box-shadow: 0 0 0 3px rgba(103, 103, 207, 0.4);
