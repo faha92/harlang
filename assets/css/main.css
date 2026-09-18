@@ -662,7 +662,7 @@ input, select, textarea {
 		.bio{
 			display: flex;
 			justify-content: center;
-			
+
 		}
 
 		#profile{
@@ -671,7 +671,7 @@ input, select, textarea {
 			border-radius: 100px;
 			padding-bottom: 10px;
 			filter: saturate(0.5);
-			
+
 		}
 
 		#profile:hover{
@@ -686,10 +686,10 @@ input, select, textarea {
 		.image img {
 			border-radius: 4px;
 			display: block;
-			
+
 		}
 
-	
+
 
 		.image.left, .image.right {
 			max-width: 40%;
@@ -722,7 +722,7 @@ input, select, textarea {
 			}
 
 		.image.main {
-		
+
 				display: flex;
 				margin: 2.5rem 0;
 				width: 100%;
@@ -732,13 +732,13 @@ input, select, textarea {
 			}
 
 			.image.main:hover {
-		
+
 			filter: saturate(1);
 			transition: 3s;
 			}
-			
-		
-  
+
+
+
 
 			.image.main img {
 				width: 100%;
@@ -1736,30 +1736,9 @@ input, select, textarea {
 		border-bottom-color: rgb(103, 103, 207);
 	}
 
-	#header .logo {
-		border-color: rgb(103, 103, 207);
-		box-shadow: 0 0 22px rgba(103, 103, 207, 0.4);
-	}
-
-	#header > *:before {
-		background: rgb(103, 103, 207);
-	}
-
-	#header nav ul {
-		border-color: rgba(103, 103, 207, 0.6);
-	}
-
-		#header nav ul li {
-			border-left-color: rgba(103, 103, 207, 0.6);
-		}
-
 		#header nav ul li a:hover {
 			background-color: rgba(103, 103, 207, 0.18);
 		}
-
-	#header nav.use-middle:after {
-		background: rgba(103, 103, 207, 0.6);
-	}
 
 	#profile {
 		box-shadow: 0 0 0 3px rgba(103, 103, 207, 0.4);
@@ -1774,7 +1753,6 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -ms-transform 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out, color 0.2s ease-in-out;
-		box-shadow: inset 0 0 0 1px rgba(103, 103, 207, 0.55);
 	}
 
 		input[type="submit"]:hover,
@@ -1813,10 +1791,6 @@ input, select, textarea {
 				-ms-transform: translateY(-2px);
 				transform: translateY(-2px);
 			}
-
-	ul.icons li a {
-		box-shadow: inset 0 0 0 1px rgba(103, 103, 207, 0.55);
-	}
 
 		ul.icons li a:hover {
 			background-color: rgba(103, 103, 207, 0.18);
