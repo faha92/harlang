@@ -1796,3 +1796,24 @@ input, select, textarea {
 			background-color: rgba(103, 103, 207, 0.18);
 			box-shadow: inset 0 0 0 1px rgb(103, 103, 207);
 		}
+
+/* Animated header graphics (Intro / Projects) */
+
+	.image.main.hero-anim {
+		filter: none;
+		background: transparent;
+		border-radius: 12px;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		line-height: 0;
+	}
+
+		.image.main.hero-anim:hover {
+			filter: none;
+		}
+
+		.image.main.hero-anim svg {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
