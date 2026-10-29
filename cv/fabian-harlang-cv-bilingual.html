@@ -122,7 +122,7 @@
   .job { margin-bottom: 16px; }
   .job-head { display: flex; justify-content: space-between; gap: 15px; }
   .role { font-size: 13.5px; font-weight: 750; }
-  .company { color: #3564ad; font-weight: 650; }
+  .company { color: #3564ad; font-weight: 650; white-space: nowrap; }
   .date { white-space: nowrap; color: #737c85; font-size: 10.5px; }
   .employment { color: #7a838c; font-size: 10px; margin-top: 1px; }
   .job p { margin: 6px 0 0; font-size: 11px; color: #3f464d; }
@@ -159,17 +159,36 @@
   [data-lang="en"] { display: none; }
   body.en [data-lang="da"] { display: none; }
   body.en [data-lang="en"] { display: block; }
+  body.en [data-lang="en"].inl { display: inline; }
   @media print {
     body { background: #fff; }
-    .page { margin: 0; box-shadow: none; }
+    .page { margin: 0; box-shadow: none; padding: 11mm 14mm 10mm; min-height: 0; height: 297mm; overflow: hidden; }
     .toolbar { display: none; }
+    header { padding-bottom: 12px; }
+    h1 { font-size: 26px; }
+    .layout { margin-top: 15px; gap: 10mm; grid-template-columns: 1fr 56mm; }
+    .section { margin-bottom: 13px; }
+    .section-title { margin-bottom: 6px; }
+    .section-title::after { margin-top: 4px; }
+    .profile { font-size: 11.5px; max-width: none; }
+    .job { margin-bottom: 11px; }
+    .role { font-size: 12.5px; }
+    .job p, .job ul { font-size: 10.2px; margin-top: 4px; }
+    .job li { margin: 1px 0; }
+    .portrait { width: 38mm; height: 38mm; margin-bottom: 12px; }
+    .side-block { margin-bottom: 13px; }
+    .side-item, .edu, .language, .interest { font-size: 10px; }
+    .side-item { margin-bottom: 7px; }
+    .edu { margin-bottom: 8px; }
+    .reference { font-size: 9.5px; margin-bottom: 6px; }
+    .skill { font-size: 9px; padding: 3px 6px; }
   }
 </style>
 </head>
 <body>
 <main class="page">
   <div class="toolbar">
-    <button class="pdf-btn" onclick="window.print()" aria-label="Export PDF" title="Export as PDF"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg> PDF</button>
+    <button class="pdf-btn" onclick="window.print()" id="pdfBtn" aria-label="Export PDF" title="Export as PDF"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg> PDF</button>
     <div class="lang-toggle" aria-label="Language">
       <button id="daBtn" class="active" onclick="setLanguage('da')">DA</button>
       <button id="enBtn" onclick="setLanguage('en')">EN</button>
@@ -179,11 +198,11 @@
   <header>
     <div>
       <h1>Fabian Clement Harlang</h1>
-      <div class="headline" data-lang="da">Full-Stack Developer &amp; Localization Specialist</div>
+      <div class="headline" data-lang="da">Full-stack-udvikler &amp; lokaliseringsspecialist</div>
       <div class="headline" data-lang="en">Full-Stack Developer &amp; Localization Specialist</div>
     </div>
     <div class="contact">
-      CHARLOTTENLUND, DENMARK<br>
+      CHARLOTTENLUND, <span class="inl" data-lang="da">DANMARK</span><span class="inl" data-lang="en">DENMARK</span><br>
       <a href="mailto:fabian@harlang.io">FABIAN@HARLANG.IO</a><br>
       +45 53 79 10 92
     </div>
@@ -213,11 +232,12 @@
         <article class="job">
           <div class="job-head">
             <div>
-              <div class="role">Full-Stack Developer <span class="company">• CLOUDUB</span></div>
+              <div class="role"><span class="inl" data-lang="da">Full-stack-udvikler</span><span class="inl" data-lang="en">Full-Stack Developer</span> <span class="company">• CLOUDUB</span></div>
               <div class="employment" data-lang="da">Projektansat</div>
               <div class="employment" data-lang="en">Project-based</div>
             </div>
-            <div class="date">Apr 2026 — nu / present</div>
+            <div class="date" data-lang="da">Apr 2026 — nu</div>
+            <div class="date" data-lang="en">Apr 2026 — present</div>
           </div>
           <p data-lang="da">Udvikling af en SaaS-platform til dubbingstudier og medielokalisering.</p>
           <p data-lang="en">Developing a SaaS platform for dubbing studios and media localization.</p>
@@ -238,7 +258,7 @@
         <article class="job">
           <div class="job-head">
             <div>
-              <div class="role">Webudvikler <span class="company">• ERA (GENERAXION)</span></div>
+              <div class="role"><span class="inl" data-lang="da">Webudvikler</span><span class="inl" data-lang="en">Web Developer</span> <span class="company">• ERA (GENERAXION)</span></div>
               <div class="employment" data-lang="da">Fuldtidsansættelse</div>
               <div class="employment" data-lang="en">Full-time</div>
             </div>
@@ -251,7 +271,7 @@
         <article class="job">
           <div class="job-head">
             <div>
-              <div class="role">Text-to-Speech Developer <span class="company">• EUROSTAR</span></div>
+              <div class="role"><span class="inl" data-lang="da">Text-to-speech-udvikler</span><span class="inl" data-lang="en">Text-to-Speech Developer</span> <span class="company">• EUROSTAR</span></div>
               <div class="employment" data-lang="da">Projektansættelse</div>
               <div class="employment" data-lang="en">Project-based</div>
             </div>
@@ -264,7 +284,7 @@
         <article class="job">
           <div class="job-head">
             <div>
-              <div class="role">Database Administrator &amp; App Developer <span class="company">• NEXTORY</span></div>
+              <div class="role"><span class="inl" data-lang="da">Databaseadministrator &amp; app-udvikler</span><span class="inl" data-lang="en">Database Administrator &amp; App Developer</span> <span class="company">• NEXTORY</span></div>
               <div class="employment" data-lang="da">Deltidsansættelse</div>
               <div class="employment" data-lang="en">Part-time</div>
             </div>
@@ -277,7 +297,7 @@
         <article class="job">
           <div class="job-head">
             <div>
-              <div class="role">Produktionskoordinator &amp; Systemudvikler <span class="company">• EUROTROLL</span></div>
+              <div class="role"><span class="inl" data-lang="da">Produktionskoordinator &amp; systemudvikler</span><span class="inl" data-lang="en">Production Coordinator &amp; Systems Developer</span> <span class="company">• EUROTROLL</span></div>
               <div class="employment" data-lang="da">Fastansættelse</div>
               <div class="employment" data-lang="en">Full-time</div>
             </div>
@@ -290,7 +310,7 @@
         <article class="job">
           <div class="job-head">
             <div>
-              <div class="role">Produktionskoordinator &amp; Systemudvikler <span class="company">• STC STUDIOS</span></div>
+              <div class="role"><span class="inl" data-lang="da">Produktionskoordinator &amp; systemudvikler</span><span class="inl" data-lang="en">Production Coordinator &amp; Systems Developer</span> <span class="company">• STC STUDIOS</span></div>
               <div class="employment" data-lang="da">Fastansættelse</div>
               <div class="employment" data-lang="en">Full-time</div>
             </div>
@@ -321,12 +341,12 @@
         <h2 class="section-title" data-lang="da">Uddannelse</h2>
         <h2 class="section-title" data-lang="en">Education</h2>
         <div class="edu">
-          <strong>Software Design • IT Universitetet København</strong>
+          <strong>Software Design • <span class="inl" data-lang="da">IT-Universitetet i København</span><span class="inl" data-lang="en">IT University of Copenhagen</span></strong>
           <span class="muted" data-lang="da">Kandidatgrad (MSc) · Aug 2021 — Jun 2024</span>
           <span class="muted" data-lang="en">MSc · Aug 2021 — Jun 2024</span>
         </div>
         <div class="edu">
-          <strong>Litteraturvidenskab • Københavns Universitet</strong>
+          <strong><span class="inl" data-lang="da">Litteraturvidenskab</span><span class="inl" data-lang="en">Literary Studies</span> • <span class="inl" data-lang="da">Københavns Universitet</span><span class="inl" data-lang="en">University of Copenhagen</span></strong>
           <span class="muted" data-lang="da">Bachelorgrad (BA) · Aug 2014 — Aug 2018</span>
           <span class="muted" data-lang="en">BA · Aug 2014 — Aug 2018</span>
         </div>
@@ -347,9 +367,9 @@
       <div class="side-block">
         <h2 class="section-title" data-lang="da">Sprog</h2>
         <h2 class="section-title" data-lang="en">Languages</h2>
-        <div class="language"><span>Dansk</span><span class="muted" data-lang="da">Modersmål</span><span class="muted" data-lang="en">Native</span></div>
-        <div class="language"><span>Engelsk</span><span class="muted" data-lang="da">Flydende</span><span class="muted" data-lang="en">Fluent</span></div>
-        <div class="language"><span>Spansk</span><span class="muted" data-lang="da">Øvet</span><span class="muted" data-lang="en">Intermediate</span></div>
+        <div class="language"><span><span class="inl" data-lang="da">Dansk</span><span class="inl" data-lang="en">Danish</span></span><span class="muted" data-lang="da">Modersmål</span><span class="muted" data-lang="en">Native</span></div>
+        <div class="language"><span><span class="inl" data-lang="da">Engelsk</span><span class="inl" data-lang="en">English</span></span><span class="muted" data-lang="da">Flydende</span><span class="muted" data-lang="en">Fluent</span></div>
+        <div class="language"><span><span class="inl" data-lang="da">Spansk</span><span class="inl" data-lang="en">Spanish</span></span><span class="muted" data-lang="da">Øvet</span><span class="muted" data-lang="en">Intermediate</span></div>
       </div>
 
       <div class="side-block">
@@ -379,6 +399,11 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
   document.getElementById("daBtn").classList.toggle("active", lang === "da");
   document.getElementById("enBtn").classList.toggle("active", lang === "en");
+  const pdf = document.getElementById("pdfBtn");
+  const label = lang === "en" ? "Export as PDF" : "Eksportér som PDF";
+  pdf.title = label;
+  pdf.setAttribute("aria-label", label);
+  document.title = lang === "en" ? "Fabian Clement Harlang — CV" : "Fabian Clement Harlang — CV";
   localStorage.setItem("cv-language", lang);
 }
 const saved = localStorage.getItem("cv-language");
